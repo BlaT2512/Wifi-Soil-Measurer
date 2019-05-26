@@ -16,4 +16,4 @@ where n is the result you want to send. This is what the ESP8266 board sends (us
 Going to `localhost/index.php` (or `ip_address/index.php`) or making a query, as shown above, shows you the current value of the sensor.
 
 ## Testing
-This website allows you to test the code without installing anything. [Click here](https://www.google.com.au) to see the current value of the 'sensor'. To the end of the url of that page, add `?result=n`, with n as a number, to set the 'sensor' value!
+This website allows you to test the code without installing anything. [Click here](https://blat2512.github.io/Wifi-Soil-Measurer/try) to see the current value of the 'sensor'. To the end of the url of that page, add `?result=n`, with n as a number, to set the 'sensor' value!
