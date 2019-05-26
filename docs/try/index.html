@@ -5,6 +5,11 @@
     <title>Wifi-SM PHP Test</title>
   </head>
   <body>
-    <h1>36</h1>
+    <?php
+      if( $_GET["result"]) {
+          echo $_GET['result'];
+      exit();
+    }
+    ?>
   </body>
 </html>
