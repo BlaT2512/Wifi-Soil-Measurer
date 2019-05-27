@@ -58,6 +58,14 @@
 </head>
 <body>
 <h1>WiFi Soil Measurer</h1>
+<div id='mainpage'></div>
+<script>
+var text = document.getElementById("mainpage");
+if (location.href.includes("?value=")){
+    var weblocation = location.href.split("?");
+    text.innerHTML = "<h3><a href='" + weblocation[0] + "'>Go to main URL: " + weblocation[0] + "</a></h3>";
+}
+</script>
 <p>What is this? This is a PHP script to allow you to write the value of a soil measurer (or any sensor) to a local file called value.txt by adding a ?value="" query to this web page.</p>
 <p>You can then retrieve the value with a Python Script, for exmaple, by reading the file value.txt and doing what you want with it.</p>
 <p>You use a device, e.g. an ESP8266 Arduino Board, to write the value by sending a GET request to this web page.</p>
@@ -68,6 +76,11 @@
 if (!empty($_GET["value"])){
     // Display to the user the sensor value
     echo $_GET["value"];
+    // Add a line break
+    ?>
+    <br>
+    <?php
+    echo "(You just set the value to " . $_GET["value"] . ")";
     // Add a line break
     ?>
     <br>
